@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration scan="true" scanPeriod="60 seconds">
+  <logger name="io.netty" level="ERROR"/>
+  
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d %-5level [%thread] %logger{0}::%L => %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>log/agent.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+      <!-- rollover daily -->
+      <fileNamePattern>log/agent-%d{yyyy-MM-dd HH}.%i.log</fileNamePattern>
+        <maxFileSize>50MB</maxFileSize>   
+      	<maxHistory>1</maxHistory> 
+      	<totalSizeCap>20GB</totalSizeCap>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d %-5level [%thread] %logger{0}::%L => %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+ 
+  <root level="TRACE">
+    <appender-ref ref="console"/>
+    <appender-ref ref="ROLLING"/>
+  </root>
+</configuration>

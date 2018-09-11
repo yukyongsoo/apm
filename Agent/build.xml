@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Agent" basedir="." default="make_jar">
+	<tstamp />
+
+	<property name="package.dir" value="package" />
+	<property name="name" value="monitor_aspect" />
+	<property name="jdk" value="1.6" />
+	<property name="version" value="1.0 (${DSTAMP})" />
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="classes" />
+	<property name="lib.dir" value="lib" />
+	<property name="aspectjtools.jar" location="${lib.dir}/aspectjtools.jar"/>
+	<property name="aop.xml.dir" location="."/>
+
+	<target name="clean_package" depends="" description="clean package">
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${package.dir}" includes="**/*" />
+		</delete>
+	</target>
+	
+	<target name="clean_classes" depends="" description="clean classes">
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${build.dir}" includes="**/*" />
+		</delete>
+	</target>
+	
+	<target name="clean" depends="clean_classes,clean_package" description="clean">
+	</target>
+	
+	<target name="make_jar" depends="clean_classes,clean_package,build,unjar_aspectj,unjar_libraries,copyToPackage"
+		description="Make jar file">
+			<delete includeEmptyDirs="true" failonerror="false">
+				<fileset dir="jar" includes="${name}_${DSTAMP}.jar" />
+			</delete>
+			<jar destfile="jar/${name}_${DSTAMP}.jar" update="true">
+				<metainf dir="${aop.xml.dir}" includes="aop.xml"/>
+				<manifest>
+					<attribute name="Vendor" value="${company}" />
+					<attribute name="Premain-Class" value="org.aspectj.weaver.loadtime.Agent" />
+					<attribute name="Can-Redefine-Classes" value="true" />
+				</manifest>
+				<path refid="jar_base" />
+			</jar>
+			<copy overwrite="true" file="jar/${name}_${DSTAMP}.jar" tofile="jar/${name}.jar" />
+			<antcall target="clean"/>
+	</target>
+	
+	<path id="classpath1">
+		<fileset dir="lib">
+			<include name="*.jar" />			
+		</fileset>
+		<pathelement path="${build.dir}" />
+	</path>
+	
+	<target name="init.taskdefs" depends="" unless="taskdefs.init">
+		<taskdef resource="org/aspectj/tools/ant/taskdefs/aspectjTaskdefs.properties">
+			<classpath>
+				<pathelement path="${aspectjtools.jar}"/>
+			</classpath>
+		</taskdef>
+		<property name="taskdefs.init" value="true"/>
+	</target>
+	
+	<path id="jar_base">
+		<fileset dir="${package.dir}">
+			<include name="aj/**/*.class" />
+			<include name="org/**/*.*" />		
+			<include name="com/**/*.*" />
+			<include name="ch/**/*.*" />
+			<include name="jd/**/*.*" />
+			<include name="**/*" />			
+		</fileset>
+	</path>
+	
+	<target name="unjar_libraries" depends="">
+		<unzip dest="${build.dir}">
+			<fileset dir="${lib.dir}">
+				<include name="yuk_common.jar" />
+				<include name="jd-core.jar" />
+			</fileset>
+		</unzip>
+	</target>	
+
+	<target name="unjar_aspectj" depends="">
+		<unzip dest="${build.dir}">
+			<fileset dir="${lib.dir}">
+				<include name="aspectjweaver.jar" />
+				<include name="aspectjrt.jar" />
+			</fileset>
+		</unzip>
+	</target>
+
+	<target name="build" depends="init.taskdefs"
+		description="Compile main source tree java files">
+		<mkdir dir="${build.dir}" />
+		<javac classpathref="classpath1" encoding="euc-kr" destdir="${build.dir}" debug="true" source="1.6" target="1.6"
+			deprecation="false" optimize="false" failonerror="true" srcdir="${src.dir}">
+			<include name="**/*.java"/>
+		</javac>
+		<iajc source="${jdk}" destdir="${build.dir}" classpathref="classpath1" fork="true" forkclasspath="${aspectjtools.jar}" verbose="off">
+			<src path="${src.dir}"/>
+			<include name="agent/EngineAspect.aj"/>
+			<include name="agent/EngineAspectCus.aj"/>
+		</iajc>
+	</target>
+	
+	<target name="copyToPackage" depends="clean_package" description="copy class files">
+		<copy todir="${package.dir}">
+			<fileset file="${build.dir}/*" />
+		</copy>
+		<copy todir="${package.dir}/aj">
+			<fileset dir="${build.dir}/aj" />
+		</copy>
+		<copy todir="${package.dir}/ch">
+			<fileset dir="${build.dir}/ch" />
+		</copy>
+		<copy todir="${package.dir}/org">
+			<fileset dir="${build.dir}/org" />
+		</copy>
+		<copy todir="${package.dir}/com">
+			<fileset dir="${build.dir}/com" />
+		</copy>
+		<copy todir="${package.dir}/jd">
+			<fileset dir="${build.dir}/jd" />
+		</copy>
+		<copy todir="${package.dir}">
+			<fileset dir="${build.dir}"/>
+		</copy>
+	</target>
+
+
+	
+
+</project>

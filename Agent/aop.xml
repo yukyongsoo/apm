@@ -1,0 +1,20 @@
+<aspectj>
+ <aspects>
+  <aspect name="agent.EngineAspect" />
+  <concrete-aspect name="agent.ConcreteAspect" extends="agent.EngineAspectCus">
+      <pointcut name="init" expression="execution(* com.windfire.comm.asysSockSrvr.initialize(..))" />
+      <pointcut name="end" expression=" execution(* com.windfire.comm.asysSockSrvr.terminate(..))" />
+      <pointcut name="transStart" expression="execution(* com.windfire.base.asysTransact.start(..))" />
+      <pointcut name="transEnd" expression="execution(* com.windfire.base.asysTransact.end(..))" />
+      <pointcut name="microTrans" expression="execution(* com.windfire..*(..))" />
+      <pointcut name="log" expression="execution(* com.windfire.agents.asysLogWriterLog4j.logMessage(..)) || execution(* com.windfire.agents.asysLogWriterFile.logMessage(..))" />
+  </concrete-aspect>  
+ </aspects>
+ <weaver options="-nowarn -XnoInline -Xlint:ignore" > 
+ <!-- <weaver options="-verbose -showWeaveInfo -XnoInline" > -->
+  <include within="com.windfire..*"/>
+  <include within="java.sql..*"/> 
+  <include within="java.lang.System..*"/> 
+  <exclude within="agent..*"/>
+ </weaver>
+</aspectj>

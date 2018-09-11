@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<XmAgent MyName="xtorm01" Type="AGENT" desc= "" collectorIp="127.0.0.1" collectorPort="2107"
+trace="false" slf4j="false" class="agent.ext.xtorm.XtormMonitor">	
+<workInterval
+	Resource = "5"
+	Trans = "5"
+	Log = "5"
+	Event = "5"
+	Health = "5"
+	Stack = "60"
+	HotSpot = "10"
+	DBHotSpot = "10"
+	Excpt="10"
+	Dis="5">
+</workInterval>
+<!-- <Xvarm xvarmIp="127.0.0.1" xvarmPort="" xvarmid="SUPER" xvarmpass="SUPER" Physical="False"/> -->
+</XmAgent>
+
+
