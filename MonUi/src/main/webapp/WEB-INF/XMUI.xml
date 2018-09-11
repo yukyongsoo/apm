@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<XMUI
+MyName="WAS1" 
+Type="CONSOLE"
+ip="127.0.0.1"
+port="2109"
+trace="false"
+slf4j="false" >
+</XMUI>
+

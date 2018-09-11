@@ -1,0 +1,11 @@
+@import "addons.scss";
+@import "MonUI.scss";
+@import "dataTable.scss";
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in MonUI.scss */
+@include v-font(codePro,'../../../../MonUI/font/CodePro/CodePro');
+.MonUI {
+  @include addons;
+  @include MonUI;
+  @include dataTable;
+}
