@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<XmAmServer>	
+	<AmassServer Name="SERVER" type="SERVER" ip="127.0.0.1" port="2109"  ExpireSch="True" AggreRes="True" 
+		trace="false" saveLogPath="C:/test/" remainLogDay="3" slf4j="true" onRefresh="true">
+	</AmassServer>
+	<!--  do not modify pool name -->
+	<DBsetting>
+ 			<pool name="Action" driver="org.h2.Driver" connect="jdbc:h2:file:./db/trans/trans"  user="SA" pswd=""/> 
+ 			<pool name="Resource" driver="org.h2.Driver" connect="jdbc:h2:file:./db/resource/resource"  user="SA" pswd=""/>  		 
+            <pool name="Event" driver="org.h2.Driver" connect="jdbc:h2:file:./db/event/event" user="SA" pswd=""/> 			 
+            <pool name="Stack" driver="org.h2.Driver" connect="jdbc:h2:file:./db/stack/stack" user="SA" pswd=""/>   			
+            <pool name="Info" driver="org.h2.Driver" connect="jdbc:h2:file:./db/info/info" user="SA" pswd=""/>  
+	</DBsetting>
+	<workInterval
+		Trans = "10"
+		Resource = "10"
+		LOG = "10"
+		EVENT = "10"
+		INFO = "10"
+		HEALTH = "30"
+		STACK = "30"
+		DBHOT = "30"
+		HOT = "30"	
+		EXCPTION = "30"	
+		DIS="10">
+	</workInterval>
+	<StateHandle 
+		postWorker=""
+		health="true"
+		trans="true"
+		cpu="true"
+		APPMEMORY = "true"
+		memory = "true"
+		excpt ="true"
+		disk="true"
+		network="true">
+	</StateHandle>
+</XmAmServer>
+

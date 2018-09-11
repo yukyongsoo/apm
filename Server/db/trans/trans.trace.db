@@ -1,0 +1,440 @@
+2016-12-08 14:06:22 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:117)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2016-12-08 14:06:22 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:117)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2016-12-08 14:06:22 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:117)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-05 02:26:17 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:123)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-05 02:26:17 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:123)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-05 02:26:17 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:123)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-12 01:00:56 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:123)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-12 01:00:56 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:123)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-12 01:00:56 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:123)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-17 03:12:11 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-17 03:12:11 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-17 03:12:11 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-18 02:27:22 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-18 02:27:22 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-19 01:06:38 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-19 01:06:38 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-01-19 01:06:38 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:80)
+	at yuk.dataBase.DBContainer.getConnection(DBContainer.java:71)
+	at yuk.dataBase.DBContainer.stop(DBContainer.java:125)
+	at yuk.dataBase.DBContainer.stopAll(DBContainer.java:118)
+	at monServer.ServerStarter$1.run(ServerStarter.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-03-15 14:51:41 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:65)
+	at yuk.dataBase.DBContainer.reopenDataBase(DBContainer.java:84)
+	at monServer.worker.internal.ExpireThread.work(ExpireThread.java:39)
+	at yuk.Thread.TimerWork.run(TimerWork.java:21)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-03-15 14:51:41 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:65)
+	at yuk.dataBase.DBContainer.reopenDataBase(DBContainer.java:84)
+	at monServer.worker.internal.ExpireThread.work(ExpireThread.java:39)
+	at yuk.Thread.TimerWork.run(TimerWork.java:21)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-03-15 14:51:41 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:65)
+	at yuk.dataBase.DBContainer.reopenDataBase(DBContainer.java:84)
+	at monServer.worker.internal.ExpireThread.work(ExpireThread.java:39)
+	at yuk.Thread.TimerWork.run(TimerWork.java:21)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-03-15 14:51:41 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:65)
+	at yuk.dataBase.DBContainer.reopenDataBase(DBContainer.java:84)
+	at monServer.worker.internal.ExpireThread.work(ExpireThread.java:39)
+	at yuk.Thread.TimerWork.run(TimerWork.java:21)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-03-15 14:51:41 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at yuk.dataBase.DBContainer.reConnection(DBContainer.java:65)
+	at yuk.dataBase.DBContainer.reopenDataBase(DBContainer.java:84)
+	at monServer.worker.internal.ExpireThread.work(ExpireThread.java:39)
+	at yuk.Thread.TimerWork.run(TimerWork.java:21)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
