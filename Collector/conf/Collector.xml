@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<XmCollector MyName="COLL" Type="COLLECTOR" desc= "" collectorIp="127.0.0.1" collectorPort="2107" serverIp="127.0.0.1" serverPort="2109" 
+ backIp ="" backPort="" machineInfo="true" trace="false" slf4j="true" >	
+	<!--  can't change pool Name -->
+	<workInterval
+	Resource = "10"
+	Trans = "10"
+	Log = "10"
+	Event = "10"
+	Health = "10"
+	Info = "10"
+	Dis="10">
+</workInterval>
+<SubChildList>
+	<xtorm01 type="DELETE,CREATE,DOWN"></xtorm01>
+</SubChildList>
+</XmCollector>
+
