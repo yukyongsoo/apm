@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="yuk" basedir="." default="make_jar">
+	<tstamp />
+	
+	<property name="package.dir" value="package" />
+	<property name="company" value="yuk" />
+	<property name="name" value="yuk_common" />
+	<property name="version" value="1.0 (${DSTAMP})" />
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="classes" />
+	<property name="lib.dir" value="lib" />
+
+	<target name="clean_package" depends="" description="clean package">
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${package.dir}" includes="**/*" />
+		</delete>
+	</target>
+
+	<target name="clean_classes" depends="" description="clean classes">
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${build.dir}" includes="**/*" />
+		</delete>
+	</target>
+	
+	<target name="clean" depends="clean_classes,clean_package" description="clean">
+	</target>
+
+	<target name="copyToPackage" depends="clean_package" description="copy class files">
+		<copy todir="${package.dir}/org">
+			<fileset dir="${build.dir}/org" />
+		</copy>
+		<copy todir="${package.dir}/com">
+			<fileset dir="${build.dir}/com" />
+		</copy>
+		<copy todir="${package.dir}/yuk">
+			<fileset dir="${build.dir}/yuk" />
+		</copy>
+		<copy todir="${package.dir}/ch">
+			<fileset dir="${build.dir}/ch" />
+		</copy>
+		<copy todir="${package.dir}/io">
+			<fileset dir="${build.dir}/io" />
+		</copy>
+	</target>
+
+	<target name="unjar_libraries" depends="">
+		<unzip dest="${build.dir}">
+			<fileset dir="${lib.dir}">		
+				<include name="slf4j-api.jar" />
+				<include name="netty.jar" />		
+				<include name="logback-classic.jar" />		
+				<include name="gson.jar" />
+				<include name="jdom2.jar" />
+				<include name="logback-core.jar" />		
+				<include name="jodatime.jar" />	
+			</fileset>
+		</unzip>
+	</target>
+	
+	<path id="classpath1">
+			<fileset dir="lib">
+				<include name="*.jar" />
+			</fileset>
+			<pathelement path="${build.dir}" />
+	</path>
+
+	<target name="build" depends="clean_classes"
+		description="Compile main source tree java files">
+		<mkdir dir="${build.dir}" />
+		<javac classpathref="classpath1" encoding="utf-8" destdir="${build.dir}" debug="true"  
+			compiler="javac1.6" source="1.6" target="1.6" deprecation="false" optimize="false"
+			failonerror="true" srcdir="${src.dir}">
+			<include name="yuk/**/*.java"/>
+		</javac>
+	</target>
+				
+	<target name="make_jar" depends="clean_package,clean_classes,build,unjar_libraries,copyToPackage,clean_package,clean_classes"
+		description="Make agent jar file">
+		<jar destfile="jar/${name}_${DSTAMP}.jar" update="true">
+			<manifest>
+				<attribute name="Vendor" value="${company}" />
+			</manifest>
+
+			<fileset dir="${package.dir}">
+				<include name="yuk/**/*" />				
+				<include name="org/**/*" />
+				<include name="com/**/*" />
+				<include name="ch/**/*" />
+				<include name="io/**/*" />
+			</fileset>
+		</jar>
+		<copy file="jar/${name}_${DSTAMP}.jar" tofile="jar/${name}.jar" />
+		<antcall target="clean"/>
+	</target>
+	
+</project>
